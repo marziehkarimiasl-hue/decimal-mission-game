@@ -10,7 +10,7 @@ const ok=document.getElementById('correct');
 const bad=document.getElementById('wrong');
 let timer;
 
-
+ 
 function load(){
 if(i>=questions.length){end();return;}
 title.textContent=story[i];
