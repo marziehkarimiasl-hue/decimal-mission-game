@@ -28,7 +28,15 @@ opt.appendChild(b);
 timer=setInterval(()=>{
 time--;totalTime++;
 t.textContent='⏱ '+time;
-if(time==0){clearInterval(timer);show();}
+if(time==0){
+  clearInterval(timer);
+  show(); // نمایش پاسخ درست
+  setTimeout(()=>{
+    i++;        // رفتن به مرحله بعد
+    load();     // بارگذاری مرحله بعد
+  },2000);      // ۲ ثانیه مکث
+}
+  
 },1000);
 }
 
